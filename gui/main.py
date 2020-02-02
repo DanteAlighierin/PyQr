@@ -9,6 +9,21 @@ import os
 window = Tk() #init
 window.title("PyQr") #title
 
+
+
+root=Tk()
+
+# create a popup menu
+menu = Menu(root, tearoff=0)
+menu.add_command(label="Undo", command=hello)
+menu.add_command(label="Redo", command=hello)
+
+# create a canvas
+frame = Frame(root, width=20, height=12)
+frame.pack()
+
+
+
 #cod generation
 def generate():
 	if len(subject.get()) != 0:
@@ -30,6 +45,7 @@ def showCode():
 	notificationLabel.config(image= photo)
 	subLabel.config(text= "Showing QR Code for: "+subject.get())
 	
+
 
 	
 ###################forms and buttons###############
@@ -65,6 +81,11 @@ for row in range(totalRows+1):
 
 for col in range(totalCols+1):
 	window.grid_columnconfigure(col, weight=1)
+
+
+
+
+
 
 #looping the GUI
 window.mainloop()
