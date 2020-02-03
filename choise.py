@@ -1,14 +1,16 @@
 #!usr/bin/python3
 
 
+choise = input('CLI/gui mode?; Type C to use cli or type g to use gui:  ')
 
-choise = input('CLI/gui mode?; Type C to use cli or type g to use gui')
-
-if choise == 'c' or 'C':
-    import cli.py
-
-if choise == 'g' or 'G':
-    pass
-
+if choise == "c":
+    import cli
+if choise == "C":
+    import cli
+if choise == "g":
+    import main
+if choise == "G":
+    import main
 else:
-    print('sorry, please type right letter')
+    print("please, enter a valid letter")
+
